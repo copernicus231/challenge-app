@@ -8,7 +8,7 @@ import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const client = new ApolloClient({
-  uri: "http://localhost:8080/graphql"
+  uri: "https://protected-cliffs-48097.herokuapp.com/graphql"
 });
 
 
