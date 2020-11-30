@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Navbar from 'react-bootstrap/Navbar'
 import Products from './Products';
 
 
@@ -24,11 +25,13 @@ class Search extends React.Component {
   
   render() {
 	  return (
+		  
 		  <div>
-	<Form onSubmit={this.handleSubmit}>
-		<Form.Control onChange={this.handleChange} value={this.state.search} className="search-text"></Form.Control>
-		<Button type="submit" className="submit-button">Buscar</Button>
-	</Form> 
+			  <Navbar bg="dark" variant="dark" className="bg-light justify-content-center" ><Form inline onSubmit={this.handleSubmit}>
+		<Form.Control onChange={this.handleChange} placeholder="Buscar" pattern="[a-zA-Z0-9\s]+" value={this.state.search}></Form.Control>
+		<Button type="submit">Buscar</Button>
+	</Form> </Navbar>
+
 	 {<Products search={this.search}/>} 
 	 </div>
 	  );

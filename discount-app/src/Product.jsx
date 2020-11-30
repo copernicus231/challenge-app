@@ -13,9 +13,8 @@ function Product(props) {
          <h2>by {`${props.product.brand}`}</h2>
         
           </div>
-          <div class="product-price-btn"><p><del>{numberFormat(`${props.product.price}`)}</del></p></div>
           <div class="product-price-btn"><p>{numberFormat(`${props.product.newPrice}`)}</p></div>
-         
+          <div class="product-price-btn-old"><p><del>{numberFormat(`${props.product.price}`)}</del></p></div>
          </div>
          
     </div>)
@@ -30,6 +29,7 @@ function Product(props) {
          <h2>by {`${props.product.brand}`}</h2>
         
           </div>
+
           <div class="product-price-btn"><p>{numberFormat(`${props.product.price}`)}</p></div>
          
          </div>
