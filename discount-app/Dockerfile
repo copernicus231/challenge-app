@@ -1,5 +1,6 @@
 FROM node:15.3-alpine3.12 AS builder
-
+ARG REACT_APP_API_URL 
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
 WORKDIR /opt/web
 COPY package.json package-lock.json ./
 RUN npm install
